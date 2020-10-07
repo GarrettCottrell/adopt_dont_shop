@@ -1,0 +1,16 @@
+<form action="/shelters/<%= @shelters.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <h3>Edit:</h3>
+  <label for="name"><b>Name:</b></label><br>
+  <input type='text' name='shelters[name]' value="<%= @shelters.name %>"/><br/>
+  <label for="address"><b>Address:</b></label><br>
+  <input type='text' name='shelters[address]' value="<%= @shelters.address %>"/><br/>
+  <label for="city"><b>city:</b></label><br>
+  <input type='text' name='shelters[city]' value="<%= @shelters.city %>"/><br/>
+  <label for="state"><b>State:</b></label><br>
+  <input type='text' name='shelters[state]' value="<%= @shelters.state %>"/><br/>
+  <label for="zip"><b>Zip:</b></label><br>
+  <input type='text' name='shelters[zip]' value="<%= @shelters.zip %>"/><br/>
+  <input type='submit'/>
+</form>
