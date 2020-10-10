@@ -10,5 +10,9 @@
 
 <p><b>Zip:</b> <%= @shelters.zip %></p>
 
-<a href="/shelters/<%= @shelters.id %>/edit" >Edit Shelter</a>
-
+<a href="/shelters/<%= @shelters.id %>/edit" >Update Shelter</a>
+   <form action="/shelters/<%= @shelters.id %>" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <input type="submit" value="delete"/>
+  </form>
