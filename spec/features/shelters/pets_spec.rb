@@ -1,8 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "pets index page", type: :feature do
-  it "can see all pet information, including image, name, age, sex, shelter" do
-    
+RSpec.describe "shelter_pets index page", type: :feature do
+  it "can see all pets for that shelter's image, name, age, sex" do
     shelter_1 = Shelter.create!({name:        "Happy Shelter",
                                 address:     "12345 Cherry Court",
                                 city:        "San Jose",
@@ -21,16 +20,15 @@ RSpec.describe "pets index page", type: :feature do
                                 sex:          "Female",
                                 shelter_id:    shelter_1.id })
 
-    visit "/pets"
-    expect(page).to have_xpath("//img[@src='#{pet_1.image}']")
-    expect(page).to have_xpath("//img[@src='#{pet_2.image}']")
-    expect(page).to have_link(pet_1.name)
+    visit "/shelters/#{shelter_1.id}/pets"
+
+    expect(page).to have_content(pet_1.name)
     expect(page).to have_content(pet_1.age)
     expect(page).to have_content(pet_1.sex)
-    expect(page).to have_content(pet_1.shelter.name)
+    expect(page).to have_content(pet_2.name)
     expect(page).to have_content(pet_2.age)
     expect(page).to have_content(pet_2.sex)
-    expect(page).to have_content(pet_2.name)
-    expect(page).to have_content(pet_2.shelter.name)
+    expect(page).to have_xpath("//img[@src='#{pet_1.image}']")
+    expect(page).to have_xpath("//img[@src='#{pet_2.image}']")
   end
 end

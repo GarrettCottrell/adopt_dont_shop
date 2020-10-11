@@ -5,7 +5,7 @@
   <h3><a href="/pets/<%= pet.id %>"><%= pet.name %></a></h3>
   <p><b>Age:</b> <%= pet.age %></p>
   <p><b>Sex:</b> <%= pet.sex %></p>
-  <p><b>Shelter:</b> <%= pet.shelter %></p>
+  <p><b>Shelter:</b> <%= pet.shelter.name %></p>
    <a href="/pets/<%= pet.id  %>/edit">Edit</a>
    <form action="/pets/<%= pet.id %>" method="POST">
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">

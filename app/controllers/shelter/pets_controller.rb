@@ -1,2 +1,4 @@
-class Shelters::PetsController < ApplicationController
+class Shelter::PetsController < ApplicationController
+  def index
+  end
 end
