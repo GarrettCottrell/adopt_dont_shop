@@ -1,0 +1,16 @@
+<form action="/pets/<%= @pets.id %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="hidden" name="_method" value="PATCH" />
+  <h3>Edit:</h3>
+  <label for="image"><b>Image:</b></label><br>
+  <input type='text' name='image' value="<%= @pets.image %>"/><br/>
+  <label for="name"><b>Name:</b></label><br>
+  <input type='text' name='name' value="<%= @pets.name %>"/><br/>
+  <label for="description"><b>Description:</b></label><br>
+  <input type='text' name='description' value="<%= @pets.description %>"/><br/>
+  <label for="age"><b>Age:</b></label><br>
+  <input type='text' name='age' value="<%= @pets.age %>"/><br/>
+  <label for="zip"><b>Zip:</b></label><br>
+  <input type='sex' name='sex' value="<%= @pets.sex %>"/><br/>
+  <input type='submit' name='Update Pet'/>
+</form>
