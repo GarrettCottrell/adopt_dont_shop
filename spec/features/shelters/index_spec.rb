@@ -14,8 +14,12 @@ RSpec.describe "shelters index page", type: :feature do
                                 zip:         94845)
 
     visit "/shelters"
-
+    
     expect(page).to have_content(shelter_1.name)
     expect(page).to have_content(shelter_2.name)
+    expect(page).to have_link("New Shelter")
+    expect(page).to have_link("Happy Shelter")
+    expect(page).to have_link("Sad Shelter")
+    
   end
 end
