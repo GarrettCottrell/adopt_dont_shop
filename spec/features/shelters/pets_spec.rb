@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "shelter_pets index page", type: :feature do
-  it "can see all pets for that shelter's image, name, age, sex" do
+  it "As a visitor when I visit a shelter show page, then I can see all pets for that shelter, including their image, name, age, sex" do
     shelter_1 = Shelter.create!({name:        "Happy Shelter",
                                 address:     "12345 Cherry Court",
                                 city:        "San Jose",
