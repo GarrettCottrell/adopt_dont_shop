@@ -6,6 +6,8 @@
   <p><b>Age:</b> <%= pet.age %></p>
   <p><b>Sex:</b> <%= pet.sex %></p>
   <p><b>Shelter:</b> <%= pet.shelter.name %></p>
+  <p><a href="/pets/<%=pet.id%>/edit">Update</a></p>
+  <p><a href="/pets/<%=pet.id%>/delete">Delete</a></p>
   </form>
 <% end %>
 

@@ -15,7 +15,7 @@ RSpec.describe "shelters index update", type: :feature do
 
     visit "/shelters"
     find(:xpath, '(//a[text()="Update"])[2]').click
-    expect(current_path).to eq("/#{shelter_1.id}/edit")
+    expect(current_path).to eq("/shelters/#{shelter_2.id}/edit")
     
     fill_in 'shelters[name]', with: 'Test_Shelter'
     fill_in 'shelters[address]', with: '2352523'
@@ -24,7 +24,7 @@ RSpec.describe "shelters index update", type: :feature do
     fill_in 'shelters[zip]', with: 3225235
     click_button 'Submit'
     
-    expect(current_path).to eq("/shelters/#{shelter_1.id}")
+    expect(current_path).to eq("/shelters/#{shelter_2.id}")
     expect(page).to have_content("Test_Shelter")
     expect(page).to have_content("2352523")
     expect(page).to have_content("test_city")

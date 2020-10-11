@@ -15,7 +15,7 @@ RSpec.describe "pets index page", type: :feature do
                                 sex:          "Male",
                                 shelter_id:   shelter_1.id
                                 })
-    pet_2 = Pet.create!({       image:        "http://cdn.akc.org/content/article-body-image/dalmatian_puppy_1.jpg",
+    pet_2 = Pet.create({       image:        "http://cdn.akc.org/content/article-body-image/dalmatian_puppy_1.jpg",
                                 name:         "Sassy",
                                 age:           4,
                                 sex:          "Female",
