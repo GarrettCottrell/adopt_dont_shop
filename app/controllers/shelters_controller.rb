@@ -1,6 +1,6 @@
 class SheltersController < ApplicationController
   def index
-    @shelters = Shelters.all
+    @shelters = Shelter.all
   end
 
   def new
@@ -8,7 +8,7 @@ class SheltersController < ApplicationController
 
   def create
     
-    shelters = Shelters.new({
+    shelters = Shelter.new({
       name: params[:shelters][:name],
       address: params[:shelters][:address],
       city: params[:shelters][:city],
@@ -20,15 +20,15 @@ class SheltersController < ApplicationController
   end
   
   def show
-    @shelters = Shelters.find(params[:id])
+    @shelters = Shelter.find(params[:id])
   end
 
   def edit
-    @shelters = Shelters.find(params[:id])
+    @shelters = Shelter.find(params[:id])
   end
 
   def update 
-    shelters = Shelters.find(params[:id])
+    shelters = Shelter.find(params[:id])
   shelters.update({
     name: params[:shelters][:name],
     address: params[:shelters][:address],
@@ -41,7 +41,7 @@ class SheltersController < ApplicationController
   end
 
   def destroy
-    Shelters.destroy(params[:id])
+    Shelter.destroy(params[:id])
   redirect_to '/shelters'
   end
 end

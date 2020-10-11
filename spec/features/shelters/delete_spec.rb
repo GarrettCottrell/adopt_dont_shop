@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "shelters update page", type: :feature do
   it "When I visit a shelter show page, there is a link to delete the shelter, 'delete' and when I click this link, the shelter is deleted and I am redirected to the shelter index page" do
-    shelter_1 = Shelters.create(name:        "Sad Shelter",
+    shelter_1 = Shelter.create(name:        "Sad Shelter",
                                 address:     "12345 Cherry Court",
                                 city:        "San Jose",
                                 state:       "California",

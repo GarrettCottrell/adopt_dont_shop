@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class Shelters < ApplicationRecord
+class Shelter < ApplicationRecord
   has_many :pets
 end

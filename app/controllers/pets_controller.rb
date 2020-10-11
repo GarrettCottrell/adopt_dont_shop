@@ -1,6 +1,7 @@
 class PetsController < ApplicationController
   def index
-    @pets = Pets.all
+    @pets = Pet.all
+
   end
   def create
     pets = Shelter.pet.new({

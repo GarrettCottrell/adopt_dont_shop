@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "shelters update page", type: :feature do
   it "When I visit the shelter show page, ther is a link to update the shelter, 'Update Shelter' and when I clik this link, I am taken to '/shelters/:id/edit where I can edit the Shelter's data" do
-    shelter_1 = Shelters.create(name:        "Happy Shelter",
+    shelter_1 = Shelter.create(name:        "Happy Shelter",
                                 address:     "12345 Cherry Court",
                                 city:        "San Jose",
                                 state:       "California",

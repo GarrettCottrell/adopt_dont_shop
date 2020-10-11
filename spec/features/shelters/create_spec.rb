@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "shelters create page", type: :feature do
   it "When I visit shelter index page, I see a link to create a new shelter, 'New Shelter' when I click this link, Then I am taken to '/shelters/new'" do
-    shelter_1 = Shelters.create(name:        "Happy Shelter",
+    shelter_1 = Shelter.create(name:        "Happy Shelter",
                                 address:     "12345 Cherry Court",
                                 city:        "San Jose",
                                 state:       "California",
