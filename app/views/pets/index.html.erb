@@ -1,7 +1,7 @@
 <h1>All Pets</h1>
 
 <% @pets.each do |pet| %>
-  <img src= "<%=pet.image%>" alt="Cute Golden Retriever">
+  <img src= "<%=pet.image%>" alt="<%= pet.description %>">
   <h3><a href="/pets/<%= pet.id %>"><%= pet.name %></a></h3>
   <p><b>Age:</b> <%= pet.age %></p>
   <p><b>Sex:</b> <%= pet.sex %></p>
@@ -13,5 +13,4 @@
     <input type="submit" value="delete"/>
   </form>
 <% end %>
-<p><a href="/pets/new">New Pet</a></p>
 
